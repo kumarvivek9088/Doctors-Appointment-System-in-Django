@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment</title>
+    <link rel="stylesheet" href="{% static 'blog.css' %}">
+</head>
+<body>
+    <div class="container">
+    <h2><a href="/">Go Home</a></h2>
+    <table id="tableid">
+        <tr>
+            <th>Profile Picture</th>
+            <th>Name</th>
+            <th>Action</th>
+        </tr>
+        {% for d in data %}
+            <tr>
+                <td><img src="/media/{{d.profilepic}}" height=100 width=100></td>
+                <td>{{d.user.first_name|add:" "|add:d.user.last_name}}</td>
+                <td><button onclick="location.href='/bookappointment/{{d.user}}'">Book appointment</button></td>
+            </tr>
+            {% endfor %}
+    </table>
+    </div>
+</body>
+</html>

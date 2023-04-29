@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirm Appointment</title>
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+</head>
+<body>
+    <div class="container">
+        <h1>
+            Book Appointment {{doctor}}
+        </h1>
+        <form method="post">
+            {% csrf_token %}
+            <input type="text" name="speciality" placeholder=" enter your required speciality"><br>
+            <input type="datetime-local" min="{{min}}" name="datetime">
+            <button type="submit">Confirm</button>
+        </form>
+    </div>
+</body>
+</html>

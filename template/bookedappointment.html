@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Booked Appointment</title>
+</head>
+<body>
+    <div class="container">
+        {% for d,t in details%}
+            <p>Doctor Name: - {{d.doctor.user}}</p>
+            <p>Start Time: - {{d.starttime}}</p>
+            <p>end time:- {{t}}</p>
+        {% endfor %}
+    </div>
+</body>
+</html>
