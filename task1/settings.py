@@ -88,7 +88,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'progresswithpyth$task3',
-        'PASSWORD' : 'Vivek@203001', #password not written here for security reason
+        'PASSWORD' : '', #password not written here for security reason
         'USER' : 'progresswithpyth',
         'HOST' : 'progresswithpython.mysql.pythonanywhere-services.com',
     }
